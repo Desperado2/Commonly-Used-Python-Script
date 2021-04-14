@@ -53,7 +53,7 @@ def pics_to_video(pics_path, output_path, fps):
     image_paths = list(map(lambda x: pics_path + x, os.listdir(pics_path)))
 
     # 注意：这里必须进行一次排序，保证所有帧的顺序是一致
-    # image_paths = sort_strings_with_emb_numbers(image_paths)
+    image_paths = sort_strings_with_emb_numbers(image_paths)
 
     # 过滤掉非图片
     image_paths = list(filter(lambda image_path: image_path.endswith('.jpg'), image_paths))
